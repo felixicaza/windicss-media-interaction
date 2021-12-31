@@ -1,0 +1,59 @@
+{
+  "name": "windicss-media-interaction",
+  "version": "1.0.0",
+  "description": "Windi CSS plugin for add media interaction variants",
+  "keywords": [
+    "windicss",
+    "windi-css",
+    "windicss-plugin",
+    "windi",
+    "css",
+    "plugin",
+    "media-interaction",
+    "media-query"
+  ],
+  "homepage": "https://github.com/Felix-Icaza/windicss-media-interaction#readme",
+  "bugs": {
+    "url": "https://github.com/Felix-Icaza/windicss-media-interaction/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Felix-Icaza/windicss-media-interaction.git"
+  },
+  "license": "MIT",
+  "author": "Felix Icaza <contacto@felixicaza.com>",
+  "main": "src/index.js",
+  "scripts": {
+    "coverage": "jest --config=jest.config.cjs --coverage",
+    "format": "prettier . --write",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --cache --fix",
+    "prepare": "husky install",
+    "release": "standard-version",
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "test": "jest --config=jest.config.cjs"
+  },
+  "lint-staged": {
+    "*.{js,cjs}": [
+      "pnpm lint:fix",
+      "pnpm format"
+    ],
+    "*.{md,yml,json}": "pnpm format"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "babel-jest": "^27.4.5",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "husky": "^7.0.4",
+    "jest": "^27.4.5",
+    "lint-staged": "^12.1.4",
+    "prettier": "^2.5.1",
+    "standard-version": "^9.3.2",
+    "windicss": "^3.4.2"
+  }
+}

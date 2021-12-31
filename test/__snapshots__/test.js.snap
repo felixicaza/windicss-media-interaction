@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Touch variants extending media query variants: extend variants 1`] = `
+"@media (any-hover: hover) {
+  .any-hover\\\\:bg-blue-600:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+  }
+  .any-hover\\\\:opacity-60:hover {
+    opacity: 0.6;
+  }
+}
+@media (any-hover: none) {
+  .any-hover-none\\\\:bg-blue-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
+  }
+  .any-hover-none\\\\:opacity-70 {
+    opacity: 0.7;
+  }
+}
+@media (any-pointer: coarse) {
+  .any-pointer-coarse\\\\:bg-blue-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(239, 246, 255, var(--tw-bg-opacity));
+  }
+  .any-pointer-coarse\\\\:opacity-0 {
+    opacity: 0;
+  }
+}
+@media (any-pointer: fine) {
+  .any-pointer-fine\\\\:bg-blue-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(219, 234, 254, var(--tw-bg-opacity));
+  }
+  .any-pointer-fine\\\\:opacity-10 {
+    opacity: 0.1;
+  }
+}
+@media (any-pointer: none) {
+  .any-pointer-none\\\\:bg-blue-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(191, 219, 254, var(--tw-bg-opacity));
+  }
+  .any-pointer-none\\\\:opacity-20 {
+    opacity: 0.2;
+  }
+}
+@media (hover: hover) {
+  .hover-hover\\\\:bg-blue-800:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(30, 64, 175, var(--tw-bg-opacity));
+  }
+  .hover-hover\\\\:opacity-80:hover {
+    opacity: 0.8;
+  }
+}
+@media (hover: none) {
+  .hover-none\\\\:bg-blue-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(30, 58, 138, var(--tw-bg-opacity));
+  }
+  .hover-none\\\\:opacity-90 {
+    opacity: 0.9;
+  }
+}
+@media (pointer: coarse) {
+  .pointer-coarse\\\\:bg-blue-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(147, 197, 253, var(--tw-bg-opacity));
+  }
+  .pointer-coarse\\\\:opacity-30 {
+    opacity: 0.3;
+  }
+}
+@media (pointer: fine) {
+  .pointer-fine\\\\:bg-blue-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
+  }
+  .pointer-fine\\\\:opacity-40 {
+    opacity: 0.4;
+  }
+}
+@media (pointer: none) {
+  .pointer-none\\\\:bg-blue-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+  }
+  .pointer-none\\\\:opacity-50 {
+    opacity: 0.5;
+  }
+}"
+`;
+
+exports[`Touch variants generate group media query variants correctly: group media query variants 1`] = `
+"@media (any-hover: hover) {
+  .group:hover .group-any-hover\\\\:text-blue-600 {
+    --tw-text-opacity: 1;
+    color: rgba(37, 99, 235, var(--tw-text-opacity));
+  }
+}
+@media (hover: hover) {
+  .group:hover .group-hover-hover\\\\:text-blue-500 {
+    --tw-text-opacity: 1;
+    color: rgba(59, 130, 246, var(--tw-text-opacity));
+  }
+}"
+`;
+
+exports[`Touch variants generate media query variants: media query variants 1`] = `
+"@media (any-hover: hover) {
+  .any-hover\\\\:bg-blue-600:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+  }
+  .any-hover\\\\:opacity-60:hover {
+    opacity: 0.6;
+  }
+}
+@media (any-hover: none) {
+  .any-hover-none\\\\:bg-blue-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
+  }
+  .any-hover-none\\\\:opacity-70 {
+    opacity: 0.7;
+  }
+}
+@media (any-pointer: coarse) {
+  .any-pointer-coarse\\\\:bg-blue-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(239, 246, 255, var(--tw-bg-opacity));
+  }
+  .any-pointer-coarse\\\\:opacity-0 {
+    opacity: 0;
+  }
+}
+@media (any-pointer: fine) {
+  .any-pointer-fine\\\\:bg-blue-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(219, 234, 254, var(--tw-bg-opacity));
+  }
+  .any-pointer-fine\\\\:opacity-10 {
+    opacity: 0.1;
+  }
+}
+@media (any-pointer: none) {
+  .any-pointer-none\\\\:bg-blue-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(191, 219, 254, var(--tw-bg-opacity));
+  }
+  .any-pointer-none\\\\:opacity-20 {
+    opacity: 0.2;
+  }
+}
+@media (hover: hover) {
+  .hover-hover\\\\:bg-blue-800:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(30, 64, 175, var(--tw-bg-opacity));
+  }
+  .hover-hover\\\\:opacity-80:hover {
+    opacity: 0.8;
+  }
+}
+@media (hover: none) {
+  .hover-none\\\\:bg-blue-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(30, 58, 138, var(--tw-bg-opacity));
+  }
+  .hover-none\\\\:opacity-90 {
+    opacity: 0.9;
+  }
+}
+@media (pointer: coarse) {
+  .pointer-coarse\\\\:bg-blue-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(147, 197, 253, var(--tw-bg-opacity));
+  }
+  .pointer-coarse\\\\:opacity-30 {
+    opacity: 0.3;
+  }
+}
+@media (pointer: fine) {
+  .pointer-fine\\\\:bg-blue-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
+  }
+  .pointer-fine\\\\:opacity-40 {
+    opacity: 0.4;
+  }
+}
+@media (pointer: none) {
+  .pointer-none\\\\:bg-blue-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+  }
+  .pointer-none\\\\:opacity-50 {
+    opacity: 0.5;
+  }
+}"
+`;
