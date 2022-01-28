@@ -30,20 +30,28 @@ plugins: [require('windicss-media-interaction')]
 
 Available variants:
 
-| Variant name         | CSS Media Query                |
-| -------------------- | ------------------------------ |
-| `any-pointer-coarse` | `@media (any-pointer: coarse)` |
-| `any-pointer-fine`   | `@media (any-pointer: fine)`   |
-| `any-pointer-none`   | `@media (any-pointer: none)`   |
-| `pointer-coarse`     | `@media (pointer: coarse)`     |
-| `pointer-fine`       | `@media (pointer: fine)`       |
-| `pointer-none`       | `@media (pointer: none)`       |
-| `any-hover`          | `@media (any-hover: hover)`    |
-| `any-hover-none`     | `@media (any-hover: none)`     |
-| `hover-hover`        | `@media (hover: hover)`        |
-| `hover-none`         | `@media (hover: none)`         |
-| `group-any-hover`    | `@media (any-hover: hover)`    |
-| `group-hover-hover`  | `@media (hover: hover)`        |
+| Variant name           | CSS Media Query                |
+| ---------------------- | ------------------------------ |
+| `any-pointer-coarse`   | `@media (any-pointer: coarse)` |
+| `any-pointer-fine`     | `@media (any-pointer: fine)`   |
+| `any-pointer-none`     | `@media (any-pointer: none)`   |
+| `pointer-coarse`       | `@media (pointer: coarse)`     |
+| `pointer-fine`         | `@media (pointer: fine)`       |
+| `pointer-none`         | `@media (pointer: none)`       |
+| `any-hover`            | `@media (any-hover: hover)`    |
+| `any-hover-none`       | `@media (any-hover: none)`     |
+| `hover-hover`          | `@media (hover: hover)`        |
+| `hover-none`           | `@media (hover: none)`         |
+| `group-any-coarse`     | `@media (any-pointer: coarse)` |
+| `group-any-fine`       | `@media (any-pointer: fine)`   |
+| `group-any-pnone`      | `@media (any-pointer: hover)`  |
+| `group-pointer-coarse` | `@media (pointer: coarse)`     |
+| `group-pointer-fine`   | `@media (pointer: fine)`       |
+| `group-pointer-none`   | `@media (pointer: none)`       |
+| `group-any-hover`      | `@media (any-hover: hover)`    |
+| `group-any-hnone`      | `@media (any-hover: none)`     |
+| `group-hover-hover`    | `@media (hover: hover)`        |
+| `group-hover-none`     | `@media (hover: none)`         |
 
 ### Adding variants:
 
