@@ -6,7 +6,6 @@ const mediaInteractionVariants = plugin(({ addVariant }) => {
    *
    * @param {string} variantName - The name of the variant
    * @param {string} addAtRule - The at rule to add the variant
-   * @param {boolean} hasModifySelectors - Check if the selector has modifier, false by default
    */
   function createVariant(variantName, addAtRule) {
     addVariant(variantName, ({ atRule }) => atRule(`@media (${addAtRule})`))
@@ -57,8 +56,19 @@ const mediaInteractionVariants = plugin(({ addVariant }) => {
   createVariantModifySelector('hover-hover', 'hover: hover')
   createVariant('hover-none', 'hover: none')
 
+  createVariantGroup('group-any-coarse', 'any-pointer: coarse')
+  createVariantGroup('group-any-fine', 'any-pointer: fine')
+  createVariantGroup('group-any-pnone', 'any-pointer: none')
+
+  createVariantGroup('group-pointer-coarse', 'pointer: coarse')
+  createVariantGroup('group-pointer-fine', 'pointer: fine')
+  createVariantGroup('group-pointer-none', 'pointer: none')
+
   createVariantGroup('group-any-hover', 'any-hover: hover', true)
+  createVariantGroup('group-any-hnone', 'any-hover: none')
+
   createVariantGroup('group-hover-hover', 'hover: hover', true)
+  createVariantGroup('group-hover-none', 'hover: none')
 })
 
 module.exports = mediaInteractionVariants
