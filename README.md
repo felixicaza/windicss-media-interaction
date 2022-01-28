@@ -44,7 +44,7 @@ Available variants:
 | `hover-none`           | `@media (hover: none)`         |
 | `group-any-coarse`     | `@media (any-pointer: coarse)` |
 | `group-any-fine`       | `@media (any-pointer: fine)`   |
-| `group-any-pnone`      | `@media (any-pointer: hover)`  |
+| `group-any-pnone`      | `@media (any-pointer: none)`   |
 | `group-pointer-coarse` | `@media (pointer: coarse)`     |
 | `group-pointer-fine`   | `@media (pointer: fine)`       |
 | `group-pointer-none`   | `@media (pointer: none)`       |
@@ -72,12 +72,22 @@ theme: {
         'any-hover-none',
         'hover-hover',
         'hover-none',
+        'group-any-coarse',
+        'group-any-fine',
+        'group-any-pnone',
+        'group-pointer-coarse',
+        'group-pointer-fine',
+        'group-pointer-none',
         'group-any-hover',
-        'group-hover-hover'
+        'group-any-hnone',
+        'group-hover-hover',
+        'group-hover-none'
       ],
       textColor: [
         'any-hover',
         'hover-hover',
+        'group-any-coarse',
+        'group-pointer-fine',
         'group-any-hover',
         'group-hover-hover'
       ]
@@ -103,13 +113,23 @@ theme: {
       'any-hover-none',
       'hover-hover',
       'hover-none',
+      'group-any-coarse',
+      'group-any-fine',
+      'group-any-pnone',
+      'group-pointer-coarse',
+      'group-pointer-fine',
+      'group-pointer-none',
       'group-any-hover',
-      'group-hover-hover'
+      'group-any-hnone',
+      'group-hover-hover',
+      'group-hover-none'
     ],
     // Only these variants will be generated for textColor
     textColor: [
       'any-hover',
       'hover-hover',
+      'group-any-coarse',
+      'group-pointer-fine',
       'group-any-hover',
       'group-hover-hover'
     ]
