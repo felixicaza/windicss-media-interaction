@@ -1,53 +1,64 @@
 const plugin = require('windicss/plugin')
 
 const mediaInteractionVariants = plugin(({ addVariant }) => {
-  addVariant('any-pointer-coarse', ({ atRule }) =>
-    atRule('@media (any-pointer: coarse)')
-  )
+  /**
+   * Function to create variants more simply
+   *
+   * @param {string} variantName - The name of the variant
+   * @param {string} addAtRule - The at rule to add the variant
+   * @param {boolean} hasModifySelectors - Check if the selector has modifier, false by default
+   */
+  function createVariant(variantName, addAtRule) {
+    addVariant(variantName, ({ atRule }) => atRule(`@media (${addAtRule})`))
+  }
 
-  addVariant('any-pointer-fine', ({ atRule }) =>
-    atRule('@media (any-pointer: fine)')
-  )
-
-  addVariant('any-pointer-none', ({ atRule }) =>
-    atRule('@media (any-pointer: none)')
-  )
-
-  addVariant('pointer-coarse', ({ atRule }) =>
-    atRule('@media (pointer: coarse)')
-  )
-
-  addVariant('pointer-fine', ({ atRule }) => atRule('@media (pointer: fine)'))
-
-  addVariant('pointer-none', ({ atRule }) => atRule('@media (pointer: none)'))
-
-  addVariant('any-hover', ({ atRule, modifySelectors }) =>
-    Object.assign(
-      atRule('@media (any-hover: hover)'),
-      modifySelectors(({ className }) => `.${className}:hover`)
+  /**
+   * Function to create variants with modify selctor
+   *
+   * @param {string} variantName - The name of the variant
+   * @param {string} addAtRule - The at rule to add the variant
+   */
+  function createVariantModifySelector(variantName, addAtRule) {
+    addVariant(variantName, ({ atRule, modifySelectors }) =>
+      Object.assign(
+        atRule(`@media (${addAtRule})`),
+        modifySelectors(({ className }) => `.${className}:hover`)
+      )
     )
-  )
+  }
 
-  addVariant('any-hover-none', ({ atRule }) =>
-    atRule('@media (any-hover: none)')
-  )
-
-  addVariant('hover-hover', ({ atRule, modifySelectors }) =>
-    Object.assign(
-      atRule('@media (hover: hover)'),
-      modifySelectors(({ className }) => `.${className}:hover`)
+  /**
+   * Function to create groups variants
+   *
+   * @param {string} variantName - The name of the variant
+   * @param {string} addAtRule - The at rule to add the variant
+   * @param {boolean} hasParentHover - Check if it's necessary to add the pseudo-class :hover to parent, false by default
+   */
+  function createVariantGroup(variantName, addAtRule, hasParentHover = false) {
+    addVariant(variantName, ({ atRule, parent }) =>
+      Object.assign(
+        atRule(`@media (${addAtRule})`),
+        parent(hasParentHover ? '.group:hover' : '.group')
+      )
     )
-  )
+  }
 
-  addVariant('hover-none', ({ atRule }) => atRule('@media (hover: none)'))
+  createVariant('any-pointer-coarse', 'any-pointer: coarse')
+  createVariant('any-pointer-fine', 'any-pointer: fine')
+  createVariant('any-pointer-none', 'any-pointer: none')
 
-  addVariant('group-any-hover', ({ atRule, parent }) =>
-    Object.assign(atRule('@media (any-hover: hover)'), parent('.group:hover'))
-  )
+  createVariant('pointer-coarse', 'pointer: coarse')
+  createVariant('pointer-fine', 'pointer: fine')
+  createVariant('pointer-none', 'pointer: none')
 
-  addVariant('group-hover-hover', ({ atRule, parent }) =>
-    Object.assign(atRule('@media (hover: hover)'), parent('.group:hover'))
-  )
+  createVariantModifySelector('any-hover', 'any-hover: hover')
+  createVariant('any-hover-none', 'any-hover: none')
+
+  createVariantModifySelector('hover-hover', 'hover: hover')
+  createVariant('hover-none', 'hover: none')
+
+  createVariantGroup('group-any-hover', 'any-hover: hover', true)
+  createVariantGroup('group-hover-hover', 'hover: hover', true)
 })
 
 module.exports = mediaInteractionVariants
