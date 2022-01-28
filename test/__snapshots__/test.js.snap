@@ -100,10 +100,58 @@ exports[`Touch variants generate group media query variants correctly: group med
     color: rgba(37, 99, 235, var(--tw-text-opacity));
   }
 }
-@media (hover: hover) {
-  .group:hover .group-hover-hover\\\\:text-blue-500 {
+@media (any-hover: none) {
+  .group .group-any-hnone\\\\:text-blue-700 {
     --tw-text-opacity: 1;
-    color: rgba(59, 130, 246, var(--tw-text-opacity));
+    color: rgba(29, 78, 216, var(--tw-text-opacity));
+  }
+}
+@media (any-pointer: coarse) {
+  .group .group-any-coarse\\\\:bg-blue-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(239, 246, 255, var(--tw-bg-opacity));
+  }
+}
+@media (any-pointer: fine) {
+  .group .group-any-fine\\\\:bg-blue-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(219, 234, 254, var(--tw-bg-opacity));
+  }
+}
+@media (any-pointer: none) {
+  .group .group-any-pnone\\\\:bg-blue-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(191, 219, 254, var(--tw-bg-opacity));
+  }
+}
+@media (hover: hover) {
+  .group:hover .group-hover-hover\\\\:text-blue-800 {
+    --tw-text-opacity: 1;
+    color: rgba(30, 64, 175, var(--tw-text-opacity));
+  }
+}
+@media (hover: none) {
+  .group .group-hover-none\\\\:text-blue-900 {
+    --tw-text-opacity: 1;
+    color: rgba(30, 58, 138, var(--tw-text-opacity));
+  }
+}
+@media (pointer: coarse) {
+  .group .group-pointer-coarse\\\\:bg-blue-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(147, 197, 253, var(--tw-bg-opacity));
+  }
+}
+@media (pointer: fine) {
+  .group .group-pointer-fine\\\\:bg-blue-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
+  }
+}
+@media (pointer: none) {
+  .group .group-pointer-none\\\\:bg-blue-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
   }
 }"
 `;

@@ -135,8 +135,16 @@ describe('Touch variants', () => {
     })
 
     const css = `
-      group-hover-hover:text-blue-500
+      group-any-coarse:bg-blue-50
+      group-any-fine:bg-blue-100
+      group-any-pnone:bg-blue-200
+      group-pointer-coarse:bg-blue-300
+      group-pointer-fine:bg-blue-400
+      group-pointer-none:bg-blue-500
       group-any-hover:text-blue-600
+      group-any-hnone:text-blue-700
+      group-hover-hover:text-blue-800
+      group-hover-none:text-blue-900
     `
 
     const result = processor.interpret(css)
